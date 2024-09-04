@@ -1,1 +1,3 @@
-# GdP_Vazquez_Workspace
+# Plantilla-planificacion
+Plan de proyecto para trabajos finales de posgrado en Sistemas Embebidos
+# GdP_workspace
