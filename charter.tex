@@ -18,8 +18,8 @@ codirector, % Uncomment to add a codirector to the title page
 \autor{Ing. Agustín Jesús Vazquez}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Título y Nombre del director}
-\pertenenciaDirector{pertenencia} 
+\director{Ing. Maximiliano Bujaldón}
+\pertenenciaDirector{EMTECH} 
 \codirector{Título y Nombre del codirector} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
 \pertenenciaCoDirector{FIUBA}
 
@@ -145,6 +145,10 @@ Usuario final & Productores agrícolas &     -      	&     -    	\\ \hline
 \end{tabularx}
 \end{table}
 
+\textbf{Colaboradores:} se tendrá en consideración la disponibilidad del encargado de San Rafael Arcángel S.A. Luis Alfredo Renna para reunir información del campo necesaria para el diseño de los sensores.
+
+\textbf{Equipo:} se tendrá en consideración la disponibilidad del Esp. Ing. Roberto Oscar Axt para la conexión del prototipo planteado con la nube.
+
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
@@ -188,7 +192,7 @@ Para el desarrollo del presente proyecto se supone que:
 la planificación y ejecución del proyecto.
 	\item El \authorname, responsable del proyecto, también será el auspiciante.
 	\item Los componentes necesarios para el desarrollo se conseguirán en tiempo y forma.
-	\item El - \supname -, director del proyecto, y el \authorname, responsable del
+	\item El \supname, director del proyecto, y el \authorname, responsable del
 proyecto, acuerdan una reunión -semanal/quincenal/mensual- durante el desarrollo.
 	\item El \authorname, responsable del proyecto, solo se ausentará de manera indefinida en caso de enfrentar una emergencia de salud grave .
 \end{itemize}
@@ -196,41 +200,40 @@ proyecto, acuerdan una reunión -semanal/quincenal/mensual- durante el desarroll
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item El sistema debe medir en tiempo real la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia.
+			\item El microcontrolador recopilará datos de los sensores para su procesamiento y posterior análisis.
+			\item El microcontrolador debe empaquetar la información de los sensores y enviarla a un broker en la nube.
+			\item El sistema debe operar con energía solar, permitiendo su funcionamiento en áreas rurales sin acceso a la red eléctrica.
+			\item El sistema debe ser adaptable a diferentes regiones climáticas del país.
 		\end{enumerate}
 	\item Requerimientos de documentación:
 		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
+			\item Documentación de ensayos de pruebas funcionales.
+			\item Documentación de informes de avance.
+			\item Documentación de memoria de trabajo.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\item Requerimiento de testing:
+		\begin{enumerate}
+			\item El sistema debe someterse a pruebas de precisión y exactitud en la recolección de datos meteorológicos.
+			\item El sistema debe ser testeado para asegurar la conectividad 4G en áreas rurales.
+			\item El sistema debe soportar al menos 24 h sin luz solar, es decir, un día nublado.
+		\end{enumerate}
+	\item Requerimientos de la interfaz:
+		\begin{enumerate}
+			\item La interfaz debe mostrar los datos en gráficos que faciliten su interpretación.
+		\end{enumerate}
+	\item Requerimientos interoperabilidad:
+		\begin{enumerate}
+			\item Los datos deben ser exportables en formatos estándar (CSV, JSON) para su análisis en otras plataformas.
+		\end{enumerate}
+	\item Requerimientos normativos y de regulación:
+		\begin{enumerate}
+			\item El sistema debe cumplir con las regulaciones locales e internacionales sobre el uso de espectro para conectividad 4G en áreas rurales.
+		\end{enumerate}
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}

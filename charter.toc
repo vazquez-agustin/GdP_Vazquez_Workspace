@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {6}6. Requerimientos}{7}{section.6}%
 \contentsline {section}{\numberline {7}7. Historias de usuarios (\textit {Product backlog})}{8}{section.7}%
 \contentsline {section}{\numberline {8}8. Entregables principales del proyecto}{8}{section.8}%
-\contentsline {section}{\numberline {9}9. Desglose del trabajo en tareas}{8}{section.9}%
+\contentsline {section}{\numberline {9}9. Desglose del trabajo en tareas}{9}{section.9}%
 \contentsline {section}{\numberline {10}10. Diagrama de Activity On Node}{9}{section.10}%
 \contentsline {section}{\numberline {11}11. Diagrama de Gantt}{10}{section.11}%
 \contentsline {section}{\numberline {12}12. Presupuesto detallado del proyecto}{13}{section.12}%
