@@ -59,11 +59,8 @@ codirector, % Uncomment to add a codirector to the title page
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & {01} de {septiembre} de 2024 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
-%		  Se puede agregar algo más \newline
-%		  En distintas líneas \newline
-%		  Así                                                    & {día} de {mes} de 202X \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
+2      & Se completa hasta el punto 9 inclusive                & {09} de {septiembre} de 2024 \\ \hline
+%3      & Se completa hasta el punto 12 inclusive                & {día} de {septiembre} de 2024 \\ \hline
 %4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
@@ -176,7 +173,6 @@ El proyecto incluye:
 El presente proyecto no incluye:
 
 \begin{itemize}
-	\item Diseño e implementación de la API que se comunicará con la aplicación web o móvil.
 	\item Diseño e implementación de la arquitectura de la nube donde se alojarán la API y la aplicación web o móvil.
 	\item Fabricación de PCB.
 	
@@ -194,115 +190,199 @@ la planificación y ejecución del proyecto.
 	\item Los componentes necesarios para el desarrollo se conseguirán en tiempo y forma.
 	\item El \supname, director del proyecto, y el \authorname, responsable del
 proyecto, acuerdan una reunión -semanal/quincenal/mensual- durante el desarrollo.
-	\item El \authorname, responsable del proyecto, solo se ausentará de manera indefinida en caso de enfrentar una emergencia de salud grave .
+	\item El \authorname, responsable del proyecto, solo se ausentará de manera indefinida en caso de enfrentar una emergencia de salud grave.
 \end{itemize}
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
-
+VER 4G por WiFi
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe medir en tiempo real la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia.
+			\item El sistema debe medir la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia.
+			\item El sistema debe mostrar la información recopilada por la estación.
+		\end{enumerate}
+	\item Requerimientos del sistema embebido:
+		\begin{enumerate}
+			\item El microcontrolador debe leer datos del sensor de temperatura, humedad y presión.
+			\item El microcontrolador debe leer datos del sensor de velocidad y dirección del viento.
+			\item El microcontrolador debe leer datos del sensor de humedad de suelo.
+			\item El microcontrolador debe leer datos del sensor de cantidad de lluvia.			
 			\item El microcontrolador recopilará datos de los sensores para su procesamiento y posterior análisis.
-			\item El microcontrolador debe empaquetar la información de los sensores y enviarla a un broker en la nube.
-			\item El sistema debe operar con energía solar, permitiendo su funcionamiento en áreas rurales sin acceso a la red eléctrica.
-			\item El sistema debe ser adaptable a diferentes regiones climáticas del país.
+			\item El microcontrolador debe tener una API para comunicarse con otros sistemas.
+			\item El microcontrolador debe enviar los datos a la nube si está conectado a internet.
+			\item El microcontrolador debe tener un servidor para devolver datos cuando son requeridos.
 		\end{enumerate}
 	\item Requerimientos de documentación:
 		\begin{enumerate}
-			\item Documentación de ensayos de pruebas funcionales.
+			\item Documentación de arquitectura de software.
 			\item Documentación de informes de avance.
 			\item Documentación de memoria de trabajo.
 		\end{enumerate}
 	\item Requerimiento de testing:
 		\begin{enumerate}
-			\item El sistema debe someterse a pruebas de precisión y exactitud en la recolección de datos meteorológicos.
-			\item El sistema debe ser testeado para asegurar la conectividad 4G en áreas rurales.
-			\item El sistema debe soportar al menos 24 h sin luz solar, es decir, un día nublado.
+			\item El sistema debe probar las funcionalidad de lectura y visualización de datos.
+			\item Se deben hacer pruebas de integración entre los diferentes componentes del sistema. 
+			\item Se deben hacer pruebas unitarias en cada componente del sistema.
 		\end{enumerate}
 	\item Requerimientos de la interfaz:
 		\begin{enumerate}
-			\item La interfaz debe mostrar los datos en gráficos que faciliten su interpretación.
+			\item La interfaz debe mostrar los datos en gráficos.
 		\end{enumerate}
 	\item Requerimientos interoperabilidad:
 		\begin{enumerate}
 			\item Los datos deben ser exportables en formatos estándar (CSV, JSON) para su análisis en otras plataformas.
-		\end{enumerate}
-	\item Requerimientos normativos y de regulación:
-		\begin{enumerate}
-			\item El sistema debe cumplir con las regulaciones locales e internacionales sobre el uso de espectro para conectividad 4G en áreas rurales.
 		\end{enumerate}
 \end{enumerate}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Para la ponderación de las historias de usuario se utiliza una escala basada en la serie de
+Fibonacci (0, 1, 2, 3, 5, 8, 13, 21, 34 ...) y una descripción cualitativa: bajo, medio y alto.
+La estimación final del esfuerzo requerido para completar una historia surge de la sumatoria de
+la ponderación anterior aplicada a las siguientes categorías: cantidad de trabajo, complejidad
+y riesgo. 
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
+El resultado de la sumatoria, de ser necesario, se aproximará al valor superior más
+cercano en la escala Fibonacci.
 
-El formato propuesto es: 
+A continuación se exponen las historias de usuario:
+
 \begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
+\item ``Como productor agrícola, quiero recibir alertas tempranas sobre condiciones climáticas adversas para proteger mis cultivos a tiempo."
 
 \textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+
+\item ``Como usuario, quiero visualizar los datos meteorológicos en tiempo real desde mi dispositivo móvil para poder tomar decisiones informadas en el campo."
+
+\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+
+\item ``Como usuario, quiero tener la posibilidad de personalizar las alertas climáticas según las necesidades de mi cultivo para que las notificaciones sean relevantes para mí."
+
+\textit{Story points}: 7 (complejidad: 2, dificultad: 2, incertidumbre: 3)
+
+\item ``Como instalador, quiero disponer de un diagrama de instalación detallado para poder configurar correctamente el sistema en diferentes ubicaciones."
+
+\textit{Story points}: 3 (complejidad: 1, dificultad: 1, incertidumbre: 1)
+
+\item ``Como desarrollador, quiero tener acceso al diagrama de circuitos esquemáticos para poder entender cómo están conectados los sensores y el microcontrolador."
+
+\textit{Story points}: 4 (complejidad: 2, dificultad: 1, incertidumbre: 1)
+
+\item ``Como técnico, quiero poder acceder al código fuente del sistema y modificar los parámetros para adaptarlo a diferentes tipos de cultivos."
+
+\textit{Story points}: 5 (complejidad: 2, dificultad: 1, incertidumbre: 2)
+
 \end{enumerate}
-\end{consigna}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
+Los entregables del proyecto son:
 
 \begin{itemize}
+	\item Código fuente documentado.
 	\item Manual de usuario.
-	\item Diagrama de circuitos esquemáticos.
-	\item Código fuente del firmware.
 	\item Diagrama de instalación.
+	\item Prototipo funcional (hardware).
+	\item Informe de pruebas y validaciones.
 	\item Memoria del trabajo final.
-	\item etc...
 \end{itemize}
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1 (suma h)
+
+\item Diseño del sistema (160 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Diseño de la arquitectura del sistema embebido (40 h)
+	\item Pruebas funcionales (16 h)
+	\item Redacción de memoria de trabajo (80 h)
+	\item Redacción de informes de avance (24 h)
 	\end{enumerate}
-\item Grupo de tareas 2 (suma h)
+
+\item Sensor de temperatura, humedad y presión (50 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Investigación de documentación técnica (8 h)
+	\item Prueba de concepto (8 h)
+	\item Desarrollo del driver (22 h)
+	\item Pruebas de validación (8 h)
+	\item Documentación (4 h)
 	\end{enumerate}
-\item Grupo de tareas 3 (suma h)
+	
+\item Sensor de velocidad y dirección del viento (50 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Investigación de documentación técnica (8 h)
+	\item Prueba de concepto (8 h)
+	\item Desarrollo del driver (22 h)
+	\item Pruebas de validación (8 h)
+	\item Documentación (4 h)
 	\end{enumerate}
+	
+\item Sensor de humedad de suelo (50 h)
+	\begin{enumerate}
+	\item Investigación de documentación técnica (8 h)
+	\item Prueba de concepto (8 h)
+	\item Desarrollo del driver (22 h)
+	\item Pruebas de validación (8 h)
+	\item Documentación (4 h)
+	\end{enumerate}
+	
+\item Sensor de cantidad de lluvia (50 h)
+	\begin{enumerate}
+	\item Investigación de documentación técnica (8 h)
+	\item Prueba de concepto (8 h)
+	\item Desarrollo del driver (22 h)
+	\item Pruebas de validación (8 h)
+	\item Documentación (4 h)
+	\end{enumerate}
+	
+\item Recopilación de datos (60 h)
+	\begin{enumerate}
+	\item Investigación sobre posibles bases de datos (14 h)
+	\item Implementación de base de datos (30 h)
+	\item Pruebas de validación (10 h)
+	\item Documentación (6 h)
+	\end{enumerate}
+
+\item API (60 h)
+	\begin{enumerate}
+	\item Investigación sobre implementación de una API (12 h)
+	\item Identificación de comandos para la implementación (4 h)
+	\item Desarrollo de la API (30 h)
+	\item Pruebas de validación (10 h)
+	\item Documentación (4 h)
+	\end{enumerate}
+
+\item Servidor de datos (60 h)
+	\begin{enumerate}
+	\item Investigación sobre posibles servidor a implementar (16 h)	
+	\item Implementación del servidor (30 h)
+	\item Pruebas de validación (10 h)
+	\item Documentación (4 h)
+	\end{enumerate}
+	
+\item Gestión de datos en la nube (60 h)
+	\begin{enumerate}
+	\item Configuración de nube (20 h)
+	\item Desarrollo de rutina de empaquetamiento y envío de datos (26 h)
+	\item Pruebas de validación (10 h)
+	\item Documentación (4 h)
+	\end{enumerate}	
+
+\item Interfaz de usuario (80 h)
+	\begin{enumerate}
+	\item Investigación sobre posibles interfaces para visualización de datos (24 h)
+	\item Implementación de interfaz de visualización (48 h)
+	\item Pruebas de validación (4 h)
+	\item Documentación (4 h)
+	\end{enumerate}		
+	
 \end{enumerate}
 
-Cantidad total de horas: tantas.
-
-\textbf{¡Importante!:} la unidad de horas es h y va separada por espacio del número. Es incorrecto escribir ``23hs".
-
-\textbf{Se recomienda que no haya ninguna tarea que lleve más de 40 h.} De ser así se recomienda dividirla en tareas de menor duración.
-
-\end{consigna}
+Cantidad total de horas: 680 h.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.20)  7 SEP 2024 02:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.8.20)  9 SEP 2024 00:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,42 +985,42 @@ LaTeX Info: Redefining \% on input line 1.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 75.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 72.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
  [3]
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 113.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 110.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
  [4]
 </home/ubuntu/Documents/Figuras/Figura1.png, id=130, 794.97pt x 352.31625pt>
 File: /home/ubuntu/Documents/Figuras/Figura1.png Graphic file (type png)
 <use /home/ubuntu/Documents/Figuras/Figura1.png>
 Package pdftex.def Info: /home/ubuntu/Documents/Figuras/Figura1.png  used on in
-put line 120.
+put line 117.
 (pdftex.def)             Requested size: 294.42636pt x 130.48936pt.
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 127.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 124.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
  [5 </home/ubuntu/Documents/Figuras/Figura1.png>]
-Underfull \hbox (badness 7133) in paragraph at lines 145--145
+Underfull \hbox (badness 7133) in paragraph at lines 142--142
 []|\OT1/cmr/m/n/10.95 Ing. Agust^^S^^Pn Jes^^Sus
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
 []|\OT1/cmr/m/n/10.95 Transportadora de
  []
 
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 180.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 177.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
 [6]
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 226.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 224.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
  [7]
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
@@ -1028,70 +1028,71 @@ File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 277.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
  [8]
-<./Figuras/AoN.png, id=181, 1239.63126pt x 592.2125pt>
-File: ./Figuras/AoN.png Graphic file (type png)
-<use ./Figuras/AoN.png>
-Package pdftex.def Info: ./Figuras/AoN.png  used on input line 319.
-(pdftex.def)             Requested size: 362.37569pt x 173.11075pt.
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 330.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 331.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
  [9]
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 406.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 393.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
- [10 <./Figuras/AoN.png>]
+ [10]
+<./Figuras/AoN.png, id=255, 1239.63126pt x 592.2125pt>
+File: ./Figuras/AoN.png Graphic file (type png)
+<use ./Figuras/AoN.png>
+Package pdftex.def Info: ./Figuras/AoN.png  used on input line 399.
+(pdftex.def)             Requested size: 362.37569pt x 173.11075pt.
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 406.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 431.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
- [11]
-<./Figuras/Gantt-2.png, id=221, 1216.545pt x 701.62125pt>
+ [11 <./Figuras/AoN.png>]
+File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
+<use ./Figuras/logoFIUBA.pdf>
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 486.
+(pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
+ [12]
+<./Figuras/Gantt-2.png, id=277, 1216.545pt x 701.62125pt>
 File: ./Figuras/Gantt-2.png Graphic file (type png)
 <use ./Figuras/Gantt-2.png>
-Package pdftex.def Info: ./Figuras/Gantt-2.png  used on input line 409.
+Package pdftex.def Info: ./Figuras/Gantt-2.png  used on input line 489.
 (pdftex.def)             Requested size: 667.61679pt x 385.02547pt.
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 414.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 494.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
- [12 <./Figuras/Gantt-2.png>]
+ [13 <./Figuras/Gantt-2.png>]
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 516.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 596.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
-
-[13
+[14
 
 
 ]
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 574.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 654.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
- [14] 
+ [15] 
 AED: lastpage setting LastPage
 File: ./Figuras/logoFIUBA.pdf Graphic file (type pdf)
 <use ./Figuras/logoFIUBA.pdf>
-Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 604.
+Package pdftex.def Info: ./Figuras/logoFIUBA.pdf  used on input line 684.
 (pdftex.def)             Requested size: 99.58464pt x 33.19096pt.
-[15] (./charter.aux
+[16] (./charter.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `charter.out' has not changed.
 (rerunfilecheck)             Checksum: E0D307C6B1B1595CCF1787452AF78626;3423.
  ) 
 Here is how much of TeX's memory you used:
- 27384 strings out of 480071
- 521147 string characters out of 5891616
- 810550 words of memory out of 5000000
- 44793 multiletter control sequences out of 15000+600000
+ 27434 strings out of 480071
+ 521489 string characters out of 5891616
+ 814549 words of memory out of 5000000
+ 44792 multiletter control sequences out of 15000+600000
  477644 words of font info for 58 fonts, out of 8000000 for 9000
  107 hyphenation exceptions out of 8191
  114i,17n,108p,580b,1018s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1104,10 +1105,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
 dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb>
-Output written on charter.pdf (15 pages, 711203 bytes).
+Output written on charter.pdf (16 pages, 713567 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 75 named destinations out of 1000 (max. 500000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 308 compressed objects within 4 object streams
+ 126 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
