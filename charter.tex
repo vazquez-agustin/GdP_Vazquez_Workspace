@@ -81,7 +81,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de medición y control de parámetros medioambientales para mitigar daños en los cultivos. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de medición y control de parámetros medioambientales para mitigar daños en los cultivos. El trabajo tendrá un presupuesto preliminar estimado de 680 horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -110,11 +110,11 @@ Al introducir un sistema de monitoreo y control más sofisticado, se busca no so
 
 En términos de innovación, el proyecto no solo se enfoca en la recolección de datos climáticos, sino que también incorpora la predicción. A futuro, se planea la integración de inteligencia artificial para estudiar el estado de crecimiento de los cultivos, lo que representa un avance significativo respecto al estado del arte en este campo. Además, el enfoque en la adaptabilidad y personalización del sistema según las necesidades específicas de cada productor constituye un valor añadido que distingue a esta solución en el mercado.
 
-En la \textbf{Figura 1} se presenta el diagrama de bloques del sistema. Se observa un microcontrolador, que actúa como nodo sensor del sistema, el cual recibirá información de diversos sensores. El sistema estará alimentado por energía solar y contará con conectividad 4G.
+En la \textbf{Figura 1} se presenta el diagrama de bloques del sistema. Se observa un microcontrolador, que actúa como nodo sensor del sistema, el cual recibirá información de diversos sensores, además contará con conectividad WiFi.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.65\textwidth]{/home/ubuntu/Documents/Figuras/Figura1.png}
+\includegraphics[width=.85\textwidth]{/home/ubuntu/Documents/Figuras/projectDiagram.png}
 \caption{Diagrama en bloques del sistema.}
 \label{fig:diagBloques}
 \end{figure}
@@ -170,10 +170,11 @@ El proyecto incluye:
 	
 \end{itemize}
 
+\newpage
 El presente proyecto no incluye:
 
 \begin{itemize}
-	\item Diseño e implementación de la arquitectura de la nube donde se alojarán la API y la aplicación web o móvil.
+	\item Diseño de una aplicación web o móvil.
 	\item Fabricación de PCB.
 	
 \end{itemize}
@@ -195,12 +196,13 @@ proyecto, acuerdan una reunión -semanal/quincenal/mensual- durante el desarroll
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
-VER 4G por WiFi
+
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
 			\item El sistema debe medir la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia.
-			\item El sistema debe mostrar la información recopilada por la estación.
+			\item El sistema debe visualizar la información recopilada por la estación en una interfaz.
+			\item El sistema debe mostrar la información recopilada por los sensores en la nube. 
 		\end{enumerate}
 	\item Requerimientos del sistema embebido:
 		\begin{enumerate}
@@ -213,6 +215,7 @@ VER 4G por WiFi
 			\item El microcontrolador debe enviar los datos a la nube si está conectado a internet.
 			\item El microcontrolador debe tener un servidor para devolver datos cuando son requeridos.
 		\end{enumerate}
+	\newpage
 	\item Requerimientos de documentación:
 		\begin{enumerate}
 			\item Documentación de arquitectura de software.
@@ -250,29 +253,18 @@ cercano en la escala Fibonacci.
 A continuación se exponen las historias de usuario:
 
 \begin{enumerate}
-\item ``Como productor agrícola, quiero recibir alertas tempranas sobre condiciones climáticas adversas para proteger mis cultivos a tiempo."
+
+\item ``Como productor agrícola, quiero que el sistema mida la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia para poder monitorear las condiciones climáticas que afectan mis cultivos."
 
 \textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
 
-\item ``Como usuario, quiero visualizar los datos meteorológicos en tiempo real desde mi dispositivo móvil para poder tomar decisiones informadas en el campo."
-
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
-
-\item ``Como usuario, quiero tener la posibilidad de personalizar las alertas climáticas según las necesidades de mi cultivo para que las notificaciones sean relevantes para mí."
-
-\textit{Story points}: 7 (complejidad: 2, dificultad: 2, incertidumbre: 3)
-
-\item ``Como instalador, quiero disponer de un diagrama de instalación detallado para poder configurar correctamente el sistema en diferentes ubicaciones."
-
-\textit{Story points}: 3 (complejidad: 1, dificultad: 1, incertidumbre: 1)
-
-\item ``Como desarrollador, quiero tener acceso al diagrama de circuitos esquemáticos para poder entender cómo están conectados los sensores y el microcontrolador."
-
-\textit{Story points}: 4 (complejidad: 2, dificultad: 1, incertidumbre: 1)
-
-\item ``Como técnico, quiero poder acceder al código fuente del sistema y modificar los parámetros para adaptarlo a diferentes tipos de cultivos."
+\item ``Como usuario, quiero que el sistema muestre la información climática recopilada en una interfaz visual para poder tomar decisiones basadas en los datos obtenidos."
 
 \textit{Story points}: 5 (complejidad: 2, dificultad: 1, incertidumbre: 2)
+
+\item ``Como usuario, quiero que el sistema envíe la información recopilada por los sensores a la nube para poder acceder a los datos desde cualquier dispositivo y lugar."
+
+\textit{Story points}: 6 (complejidad: 2, dificultad: 2, incertidumbre: 2)
 
 \end{enumerate}
 
