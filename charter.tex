@@ -24,8 +24,8 @@ codirector, % Uncomment to add a codirector to the title page
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Jurado CESE}
+\empresaCliente{FIUBA}
  
 \fechaINICIO{20 de agosto de 2024}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{08 de octubre de 2024} 	%Fecha de final de cursada de GdP
@@ -60,8 +60,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & {01} de {septiembre} de 2024 \\ \hline
 2      & Se completa hasta el punto 9 inclusive                & {09} de {septiembre} de 2024 \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {septiembre} de 2024 \\ \hline
-%4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
+3      & Se completa hasta el punto 12 inclusive               & {16} de {septiembre} de 2024 \\ \hline
+4      & Se completa el plan	                               & {22} de {septiembre} de 2024 \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -81,7 +81,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de medición y control de parámetros medioambientales para mitigar daños en los cultivos. El trabajo tendrá un presupuesto preliminar estimado de 680 horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de medición y control de parámetros medioambientales para mitigar daños en los cultivos. El trabajo tendrá un presupuesto preliminar estimado de 630 horas y un costo estimado de U\$D 25 622.46, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -104,7 +104,7 @@ En el contexto de la agricultura en Argentina, el monitoreo del clima se ha conv
 
 El presente proyecto surge en este contexto agrícola, en un país donde el clima es un factor crítico e incontrolable que afecta significativamente las actividades productivas. La motivación principal radica en la necesidad de mitigar los riesgos climáticos a los que se enfrentan los productores agrícolas. Aunque el clima no puede ser controlado, sí es posible reducir su impacto mediante una adecuada preparación y anticipación.
 
-La propuesta consiste en diseñar e implementar una estación meteorológica que permita la medición en tiempo real de parámetros climáticos clave. Esto se logra a través de un sistema electrónico avanzado que recopila y analiza datos meteorológicos, generando alertas tempranas y proporcionando información crucial para la toma de decisiones en el campo.
+La propuesta consiste en diseñar e implementar una estación meteorológica que permita la medición de parámetros climáticos clave. Esto se logra a través de un sistema electrónico avanzado que recopila y analiza datos meteorológicos, generando alertas tempranas y proporcionando información crucial para la toma de decisiones en el campo.
 
 Al introducir un sistema de monitoreo y control más sofisticado, se busca no solo mejorar la capacidad de respuesta ante eventos climáticos adversos, sino también fomentar la competencia en el mercado de tecnologías agrícolas, lo cual podría resultar en una disminución de precios y en un acceso más amplio a estas soluciones.
 
@@ -114,7 +114,7 @@ En la \textbf{Figura 1} se presenta el diagrama de bloques del sistema. Se obser
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.85\textwidth]{/home/ubuntu/Documents/Figuras/projectDiagram.png}
+\includegraphics[width=.85\textwidth]{./Figuras/projectDiagram1.png}
 \caption{Diagrama en bloques del sistema.}
 \label{fig:diagBloques}
 \end{figure}
@@ -149,7 +149,7 @@ Usuario final & Productores agrícolas &     -      	&     -    	\\ \hline
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-Diseñar e implementar un prototipo de sistema electrónico para una estación de medición y control meteorológico en tiempo real. Los datos recolectados por la estación se analizarán para detectar variaciones en el clima y generar un sistema eficiente de monitoreo y alerta temprana.
+Diseñar e implementar un prototipo de sistema electrónico para una estación de medición y control meteorológico. Los datos recolectados por la estación se analizarán para detectar variaciones en el clima y generar un sistema eficiente de monitoreo y alerta temprana.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
@@ -200,19 +200,18 @@ proyecto, acuerdan una reunión -semanal/quincenal/mensual- durante el desarroll
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe medir la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia.
+			\item El sistema debe medir la temperatura, humedad, presión atmosférica, velocidad y dirección del viento y humedad del suelo.
 			\item El sistema debe visualizar la información recopilada por la estación en una interfaz.
 			\item El sistema debe mostrar la información recopilada por los sensores en la nube. 
 		\end{enumerate}
 	\item Requerimientos del sistema embebido:
 		\begin{enumerate}
-			\item El microcontrolador debe leer datos del sensor de temperatura, humedad y presión.
-			\item El microcontrolador debe leer datos del sensor de velocidad y dirección del viento.
-			\item El microcontrolador debe leer datos del sensor de humedad de suelo.
-			\item El microcontrolador debe leer datos del sensor de cantidad de lluvia.			
+			\item El microcontrolador debe leer datos del sensor de temperatura, humedad y presión con un margen de error de ±1°C, ±3\% y ±2hPa respectivamente.
+			\item El microcontrolador debe leer datos del sensor de velocidad y dirección del viento con un margen de error de ±0.5 m/s y ±10° respectivamente.
+			\item El microcontrolador debe leer datos del sensor de humedad de suelo con un margen de error de ±5\%.	
 			\item El microcontrolador recopilará datos de los sensores para su procesamiento y posterior análisis.
 			\item El microcontrolador debe tener una API para comunicarse con otros sistemas.
-			\item El microcontrolador debe enviar los datos a la nube si está conectado a internet.
+			\item El microcontrolador debe enviar los datos a la nube si está conectado a internet. La transmisión debe ocurrir al menos cada 5 minutos cuando haya conexión.
 			\item El microcontrolador debe tener un servidor para devolver datos cuando son requeridos.
 		\end{enumerate}
 	\newpage
@@ -230,7 +229,7 @@ proyecto, acuerdan una reunión -semanal/quincenal/mensual- durante el desarroll
 		\end{enumerate}
 	\item Requerimientos de la interfaz:
 		\begin{enumerate}
-			\item La interfaz debe mostrar los datos en gráficos.
+			\item La interfaz debe mostrar los datos en gráficos y deben actualizarse al menos cada 2 minutos con nuevos datos.
 		\end{enumerate}
 	\item Requerimientos interoperabilidad:
 		\begin{enumerate}
@@ -254,7 +253,7 @@ A continuación se exponen las historias de usuario:
 
 \begin{enumerate}
 
-\item ``Como productor agrícola, quiero que el sistema mida la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia para poder monitorear las condiciones climáticas que afectan mis cultivos."
+\item ``Como productor agrícola, quiero que el sistema mida la temperatura, humedad, presión atmosférica, velocidad y dirección del viento y humedad del suelo para poder monitorear las condiciones climáticas que afectan mis cultivos."
 
 \textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
 
@@ -287,11 +286,10 @@ Los entregables del proyecto son:
 
 \begin{enumerate}
 
-\item Diseño del sistema (160 h)
+\item Diseño del sistema (80 h)
 	\begin{enumerate}
 	\item Diseño de la arquitectura del sistema embebido (40 h)
 	\item Pruebas funcionales (16 h)
-	\item Redacción de memoria de trabajo (80 h)
 	\item Redacción de informes de avance (24 h)
 	\end{enumerate}
 
@@ -321,16 +319,7 @@ Los entregables del proyecto son:
 	\item Pruebas de validación (8 h)
 	\item Documentación (4 h)
 	\end{enumerate}
-	
-\item Sensor de cantidad de lluvia (50 h)
-	\begin{enumerate}
-	\item Investigación de documentación técnica (8 h)
-	\item Prueba de concepto (8 h)
-	\item Desarrollo del driver (22 h)
-	\item Pruebas de validación (8 h)
-	\item Documentación (4 h)
-	\end{enumerate}
-	
+\newpage
 \item Recopilación de datos (60 h)
 	\begin{enumerate}
 	\item Investigación sobre posibles bases de datos (14 h)
@@ -371,228 +360,180 @@ Los entregables del proyecto son:
 	\item Pruebas de validación (4 h)
 	\item Documentación (4 h)
 	\end{enumerate}		
+
+\item Redacción de memoria de trabajo (80 h)
+	\begin{enumerate}
+	\item Taller A (40 h)
+	\item Taller B (40 h)
+	\end{enumerate}
+
 	
 \end{enumerate}
 
-Cantidad total de horas: 680 h.
+\textbf{Cantidad total de horas: 630 h.}
+
+\newpage
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior.
-
-Una herramienta simple para desarrollar los diagramas es el Draw.io (\url{https://app.diagrams.net/}).
-\href{https://app.diagrams.net}{Draw.io}
-
+En la \textbf{Figura 2} se detalla el diagrama de Activity on Node. El proyecto tendrá \textit{inicio} el día 14 de octubre de 2024, y con una fecha tentativa de fin el 30 de junio de 2025. Las tareas en conjunto representan 630 h, de las cuales 590 h son críticas, representadas con línea gruesa en el diagrama.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=.8\textwidth]{./Figuras/AoN_project.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semi críticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color.
-
-\end{consigna}
+\newpage
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
-
 \begin{figure}[htpb]
-  \begin{center}
-    \begin{ganttchart}[
-      time slot unit=day,
-      time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \end{ganttchart}
-  \end{center}
-  \caption{Diagrama de gantt de ejemplo}
-  \label{fig:gantt}
+\centering 
+\includegraphics[width=.7\textwidth, height=.74\textheight]{./Figuras/GdP_T.png}
+\caption{Tareas de \textit{Diagrama de Gantt}.}
+\label{fig:ganttTasks}
 \end{figure}
-
 
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
+\includegraphics[width=1.55\textwidth, height=1\textheight]{./Figuras/Gantt.png}
+\caption{\textit{Diagrama de Gantt1} (Parte 1).} %Modificar este título acorde.
 \label{fig:diagGantt}
 \end{figure}
-
 \end{landscape}
 
-\end{consigna}
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1.55\textwidth, height=1\textheight]{./Figuras/Gantt (1).png}
+\caption{\textit{Diagrama de Gantt2} (Parte 2).} %Modificar este título acorde.
+\label{fig:diagGantt}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1.55\textwidth, height=1\textheight]{./Figuras/Gantt (2).png}
+\caption{\textit{Diagrama de Gantt2} (Parte 3).} %Modificar este título acorde.
+\label{fig:diagGantt}
+\end{figure}
+\end{landscape}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-Incluir la aclaración de si se emplea como moneda el peso argentino (ARS) o si se usa moneda extranjera (USD, EUR, etc). Si es en moneda extranjera se debe indicar la tasa de conversión respecto a la moneda local en una fecha dada.
-
-\end{consigna}
+En el siguiente cuadro se muestra el detalle de los costos del proyecto expresados en dólares
+americanos (U\$D).
 
 \begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
+\begin{tabularx}{\linewidth}{@{}|X|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS DIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \cellcolor[HTML]{C0C0C0}Cantidad &
+  \cellcolor[HTML]{C0C0C0}Valor unitario &
+  \cellcolor[HTML]{C0C0C0}Valor total \\ \hline
+Placa ESP32-C3-DEVKITC-02 & 1 & 8.00 & 8.00 \\ \hline
+Fuente de energía & 1 & 9.49 & 9.49 \\ \hline
+Sensor de rapidez de viento & 1 & 29.99 & 29.99 \\ \hline
+Sensor de dirección de viento & 1 & 22.75 & 22.75 \\ \hline
+Sensor de humedad de suelo & 1 & 5.69 & 5.69 \\ \hline
+Sensor de temperatura, humedad y presión & 1 & 5.72 & 5.72 \\ \hline
+Honorarios profesionales & 680 & 25.00 & 17 000.00 \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL} & 17 081.64 \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+Descripción & Cantidad & Valor unitario & Valor total \\ \hline
+Se estima un 50\% de los costos directos & 1 & 8 540.82 & 8 540.82 \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL} & 8 540.82 \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
-\end{tabularx}%
+\multicolumn{3}{|c|}{TOTAL} & 25 622.46 \\ \hline
+\end{tabularx}
 \end{table}
 
+Al último cierre al 16/09/2024 la cotización es de \$942.0. Dando un total en pesos argentinos de \$24 136 357.32
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+a) Identificación de los riesgos y estimación de sus consecuencias:
+
+A continuación se detallan cinco posibles riesgos inherentes al proyecto. Estos son evaluados según su grado de severidad y probabilidad de ocurrencia tomando valores de 1 a 10.
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+\textbf{Riesgo 1: demora en la entrega de los insumos.}
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): 8 (ocho)
+		\begin{itemize}
+			\item Una demora aduanera, retrasaría el proyecto afectando la fecha de cierre.
+		\end{itemize}
+	\item Ocurrencia (O): 5 (cuatro)
+		\begin{itemize}
+			\item El responsable del proyecto se ubica en Irlanda, que está bien comunicado con los proveedores, principalmente chinos, pero no está excento de demoras.
+		\end{itemize}
 \end{itemize}   
 
-Riesgo 2:
+\textbf{Riesgo 2: pérdida o destrucción del kit de desarrollo o de los componentes.}
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 7 (siete)
+		\begin{itemize}
+			\item Los plazos de entrega de los proveedores identificados son superiores a 4 semanas.
+		\end{itemize}
+	\item Ocurrencia (O): 3 (tres)
+		\begin{itemize}
+			\item El desarrollo del prototipo será llevado a cabo en casa del responsable del proyecto.
+		\end{itemize}
 \end{itemize}
 
-Riesgo 3:
+\textbf{Riesgo 3: tiempo escaso para adquirir los conocimientos necesarios.}
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 6 (seis)
+		\begin{itemize}
+			\item Puede repercutir en un bajo cumplimiento de los requerimientos.
+		\end{itemize}
+	\item Ocurrencia (O): 3 (tres)
+		\begin{itemize}
+			\item Basado en experiencias previas, se afirma que se dedicará tiempo extra al estudio teórico y práctico en el transcurso del proyecto.
+		\end{itemize}
 \end{itemize}
 
+\textbf{Riesgo 4: disponibilidad de tiempo del equipo de trabajo.}
+\begin{itemize}
+	\item Severidad (S): 9 (nueve)
+		\begin{itemize}
+			\item Se generarían retrasos y hasta incumplimiento total del proyecto.
+		\end{itemize}
+	\item Ocurrencia (O): 4 (tres)
+		\begin{itemize}
+			\item Debido a la carga laboral o temas de fuerza mayor podrían imposibilitar
+avanzar con el proyecto según el cronograma establecido.
+		\end{itemize}
+\end{itemize}
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+\textbf{Riesgo 5: componentes defectuosos.}
+\begin{itemize}
+	\item Severidad (S): 9 (nueve)
+		\begin{itemize}
+			\item Si algún componente electrónico importado viene defectuoso, el proyecto se
+retrasaría y se incurriría en gastos adicionales.
+		\end{itemize}
+	\item Ocurrencia (O): 3 (tres)
+		\begin{itemize}
+			\item La probabilidad de que un componente venga defectuoso no es alta, pero tampoco nula.
+		\end{itemize}
+\end{itemize}
+
+b) Tabla de gestión de riesgos:      \textit{(El RPN se calcula como RPN=SxO)}
 
 \begin{table}[htpb]
 \centering
@@ -600,77 +541,127 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+Demora en la entrega de los insumos                            &8  &5  &40   &8   &3   &24    \\ \hline
+Pérdida o rotura del kit de desarrollo                         &7  &3  &21   &    &    &      \\ \hline
+Tiempo escaso para adquirir los conocimientos necesarios       &6  &3  &18   &    &    &      \\ \hline
+Disponibilidad de tiempo del equipo de trabajo                 &9  &4  &36   &9   &2   &18    \\ \hline
+Componentes defectuosos                                        &9  &3  &27   &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
+\textit{\textbf{Criterio adoptado:}} se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 30.
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
-
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+\textit{\textbf{Nota:} los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.}
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+\textbf{Riesgo 1: demora en la entrega de los insumos.}\\
+\textbf{Plan de mitigación:} realizar las compras con mayor anticipación y seleccionando insumos que se consigan en el mercado local y/o buscando dos o más alternativas de importación.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+	\item Severidad (S*): 8 (ocho)
+        \begin{itemize}
+			\item La severidad permanece invariable.
+		\end{itemize}
+	\item Ocurrencia (O*): 3 (tres)
+        \begin{itemize}
+			\item Anticiparse al inicio del proyecto con la compra de componentes y tener alternativas no afectaría a los plazos de entrega propuestos inicialmente.
+		\end{itemize}
 	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
-
+\textbf{Riesgo 4: disponibilidad de tiempo del equipo de trabajo.}\\
+\textbf{Plan de mitigación:} realizar las consultas por escrito al director, pero sin dejar de avanzar con el resto de tareas, ya que no son dependientes entre sí. 
+\begin{itemize}
+	\item Severidad (S*): 9 (nueve)
+        \begin{itemize}
+			\item La severidad permanece invariable.
+		\end{itemize}
+	\item Ocurrencia (O*): 2 (dos)
+        \begin{itemize}
+			\item Anticipar el inicio de otras tareas en caso de una demora de respuesta por parte del director, ahorraría los tiempos muertos al avanzar en otras tareas propuestas en el cronograma.
+		\end{itemize}
+	\end{itemize}
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
-
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
-
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
-\end{itemize}
+	\item \underline{Requerimiento \#1.1}: el sistema debe medir la temperatura, humedad, presión atmosférica, velocidad y dirección del viento, humedad del suelo y cantidad de lluvia.
+		\begin{itemize}
+			\item \textbf{Verificación:} se verificarán las especificaciones técnicas de los sensores, comparando los resultados con instrumentos certificados y probando la consistencia de las mediciones.
+			\item \textbf{Validación:} se contrastarán las mediciones en campo con referencias estándar, y el cliente validará la precisión y consistencia en diversas condiciones.
+		\end{itemize}
+			
+	\item \underline{Requerimiento \#1.2}: el sistema debe mostrar la información recopilada por los sensores en la nube.
+		\begin{itemize}
+			\item \textbf{Verificación:} se confirmará que los datos se visualizan correctamente en la interfaz, actualizándose de forma adecuada y accesible desde distintos dispositivos.
+			\item \textbf{Validación:} el cliente revisará la presentación y claridad de los datos en la interfaz y validará su funcionalidad visual.
+		\end{itemize}
+			
+	\item \underline{Requerimiento \#1.3}: el sistema debe visualizar la información recopilada por la estación en una interfaz.
+		\begin{itemize}
+			\item \textbf{Verificación:} se probará la correcta transmisión y almacenamiento de los datos en la nube, con mecanismos de recuperación en caso de fallas de red.
+			\item \textbf{Validación:} el cliente accederá a los datos desde la nube, confirmando su precisión y disponibilidad desde cualquier ubicación.
+		\end{itemize}
+
+	\item \underline{Requerimiento \#2.6}: el microcontrolador debe tener una API para comunicarse con otros sistemas.
+		\begin{itemize}
+			\item \textbf{Verificación:} se  revisará la documentación de la API y se realizarán pruebas funcionales de conexión con otros sistemas, validando los endpoints y los métodos de comunicación disponibles. Se probará la respuesta del microcontrolador ante solicitudes de datos y su capacidad para enviar información correctamente.
+			\item \textbf{Validación:} el cliente realizará pruebas de integración con sus sistemas, confirmando que la API permite una comunicación fluida y eficiente entre el microcontrolador y otros sistemas externos, cumpliendo con los estándares acordados.
+		\end{itemize}
+		
+	\item \underline{Requerimiento \#2.8}: el microcontrolador debe tener un servidor para devolver datos cuando son requeridos.
+		\begin{itemize}
+			\item \textbf{Verificación:} se probará la implementación del servidor en el microcontrolador, verificando que responde correctamente a las solicitudes de datos mediante protocolos estándar (HTTP, MQTT). Se realizarán pruebas de carga para asegurar que el servidor puede manejar múltiples solicitudes simultáneas sin pérdida de información.
+			\item \textbf{Validación:} el  cliente realizará pruebas de consulta de datos a través del servidor, verificando que los datos solicitados sean devueltos correctamente y en el formato esperado. Se confirmará que la latencia y el rendimiento cumplen con las especificaciones requeridas.
+		\end{itemize}
+		
+	\item \underline{Requerimiento \#3.1}: documentación de arquitectura de software.
+		\begin{itemize}
+			\item \textbf{Verificación:} se revisará la completitud y exactitud de la documentación técnica y manuales, asegurando que cubran todos los aspectos del sistema.
+			\item \textbf{Validación:} el cliente revisará la documentación y confirmará que es clara y suficiente para operar y comprender el sistema.
+		\end{itemize}
+		
+	\item \underline{Requerimiento \#5.1}: la interfaz debe mostrar los datos en gráficos y deben actualizarse al menos cada 2 minutos con nuevos datos.
+		\begin{itemize}
+			\item \textbf{Verificación:} se probará la correcta visualización de los datos en gráficos, verificando que las actualizaciones y personalizaciones funcionen adecuadamente.
+			\item \textbf{Validación:} el cliente validará la claridad de los gráficos y confirmará que cumplen con sus expectativas visuales y funcionales.
+		\end{itemize}
 
 \end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+Al finalizar el proyecto se establecen las siguientes actividades:
 
-\begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
-\end{itemize}
+\begin{enumerate}
+	\item Contrastar el desarrollo del proyecto respecto a la planificación original.
+		\begin{itemize}
+			\item Se llevará a cabo una comparación detallada entre el cronograma original y el real, así como entre los costos previstos y los finales.
+			\item El responsable del proyecto generará una hoja de cálculo que contenga los tiempos y costos presupuestados frente a los realizados, destacando las variaciones significativas.
+			\item Se evaluarán también los riesgos previstos al comienzo del proyecto y cómo se gestionaron durante su desarrollo.
+		\end{itemize}
 
-\end{consigna}
+	\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los
+problemas que surgieron y como se solucionaron.
+		\begin{itemize}
+			\item Se convocará a los colabores para documentar los procedimientos y técnicas utilizadas, identificando aquellas que fueron efectivas y las que no generaron los resultados esperados.
+			\item Además, se registrarán los principales problemas encontrados y las soluciones implementadas. Este análisis formará parte de las lecciones aprendidas del proyecto.
+		\end{itemize}
+		
+	\item Archivado de toda la documentación del proyecto.
+		\begin{itemize}
+			\item El responsable del proyecto deberá organizar y archivar toda la información generada durante el proyecto, asegurando que esté accesible para futuras consultas.
+			\item Se incluirán todos los documentos técnicos, registros de avances y cualquier otra documentación relevante.
+		\end{itemize}
+		
+	\item Redacción de memoria final y presentación del proyecto.
+		\begin{itemize}
+			\item El responsable del proyecto redactará la memoria final, la cual será presentada en el marco de la Especialización en Sistemas Embebidos en la Facultad de Ingeniería de la Universidad de Buenos Aires.
+			\item Todos los involucrados en el proyecto serán invitados a la presentación y se les ofrecerá un agradecimiento formal por su colaboración.
+			\item Además, el responsable se ocupará de organizar esta presentación final y de coordinar la asistencia de los invitados.
+		\end{itemize}
+
+\end{enumerate}
 
 \end{document}
