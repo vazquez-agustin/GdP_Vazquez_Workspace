@@ -1,6 +1,6 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+% codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
@@ -20,8 +20,8 @@ codirector, % Uncomment to add a codirector to the title page
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Ing. Maximiliano Bujaldón}
 \pertenenciaDirector{EMTECH} 
-\codirector{Título y Nombre del codirector} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
-\pertenenciaCoDirector{FIUBA}
+\codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
+\pertenenciaCoDirector{}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Jurado CESE}
@@ -62,6 +62,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 2      & Se completa hasta el punto 9 inclusive                & {09} de {septiembre} de 2024 \\ \hline
 3      & Se completa hasta el punto 12 inclusive               & {16} de {septiembre} de 2024 \\ \hline
 4      & Se completa el plan	                               & {22} de {septiembre} de 2024 \\ \hline
+5      & Se realizan correcciones finales                      & {29} de {septiembre} de 2024 \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -81,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de medición y control de parámetros medioambientales para mitigar daños en los cultivos. El trabajo tendrá un presupuesto preliminar estimado de 630 horas y un costo estimado de U\$D 25 622.46, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de medición y control de parámetros medioambientales para mitigar daños en los cultivos. El trabajo tendrá un presupuesto preliminar estimado de 630 horas y un costo estimado de U\$D 25 622.46, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública en junio.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -377,7 +378,7 @@ Los entregables del proyecto son:
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-En la \textbf{Figura 2} se detalla el diagrama de Activity on Node. El proyecto tendrá \textit{inicio} el día 14 de octubre de 2024, y con una fecha tentativa de fin el 30 de junio de 2025. Las tareas en conjunto representan 630 h, de las cuales 590 h son críticas, representadas con línea gruesa en el diagrama.
+En la \textbf{Figura 2} se detalla el diagrama de Activity on Node. El proyecto tendrá \textit{inicio} el día 14 de octubre de 2024, y con una fecha tentativa de fin el 30 de junio de 2025. Las tareas en conjunto representan 630 h, de las cuales 490 h son críticas, representadas con línea gruesa en el diagrama.
 
 \begin{figure}[htpb]
 \centering 
@@ -393,35 +394,24 @@ En la \textbf{Figura 2} se detalla el diagrama de Activity on Node. El proyecto 
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.7\textwidth, height=.74\textheight]{./Figuras/GdP_T.png}
+\includegraphics[width=.65\textwidth, height=.74\textheight]{./Figuras/GdP_T.png}
 \caption{Tareas de \textit{Diagrama de Gantt}.}
 \label{fig:ganttTasks}
 \end{figure}
 
-\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1.55\textwidth, height=1\textheight]{./Figuras/Gantt.png}
-\caption{\textit{Diagrama de Gantt1} (Parte 1).} %Modificar este título acorde.
+\includegraphics[width=1\textwidth, height=.9\textheight]{./Figuras/DiagramaGantt.png}
+\caption{\textit{Diagrama de Gantt}.}
 \label{fig:diagGantt}
 \end{figure}
-\end{landscape}
 
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1.55\textwidth, height=1\textheight]{./Figuras/Gantt (1).png}
-\caption{\textit{Diagrama de Gantt2} (Parte 2).} %Modificar este título acorde.
-\label{fig:diagGantt}
-\end{figure}
-\end{landscape}
-
-\begin{landscape}
-\begin{figure}[htpb]
-\centering 
-\includegraphics[width=1.55\textwidth, height=1\textheight]{./Figuras/Gantt (2).png}
-\caption{\textit{Diagrama de Gantt2} (Parte 3).} %Modificar este título acorde.
-\label{fig:diagGantt}
+\includegraphics[width=1.55\textwidth, height=1\textheight]{./Figuras/GanttHigh.png}
+\caption{\textit{Diagrama de Gantt} (Tareas de alto nivel).} %Modificar este título acorde.
+\label{fig:diagGanttHighLevel}
 \end{figure}
 \end{landscape}
 
@@ -542,10 +532,10 @@ b) Tabla de gestión de riesgos:      \textit{(El RPN se calcula como RPN=SxO)}
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 Demora en la entrega de los insumos                            &8  &5  &40   &8   &3   &24    \\ \hline
-Pérdida o rotura del kit de desarrollo                         &7  &3  &21   &    &    &      \\ \hline
-Tiempo escaso para adquirir los conocimientos necesarios       &6  &3  &18   &    &    &      \\ \hline
+Pérdida o rotura del kit de desarrollo                         &7  &3  &21   &-   &-   &-     \\ \hline
+Tiempo escaso para adquirir los conocimientos necesarios       &6  &3  &18   &-   &-   &-     \\ \hline
 Disponibilidad de tiempo del equipo de trabajo                 &9  &4  &36   &9   &2   &18    \\ \hline
-Componentes defectuosos                                        &9  &3  &27   &    &    &      \\ \hline
+Componentes defectuosos                                        &9  &3  &27   &-   &-   &-     \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -603,6 +593,8 @@ c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo
 			\item \textbf{Validación:} el cliente accederá a los datos desde la nube, confirmando su precisión y disponibilidad desde cualquier ubicación.
 		\end{itemize}
 
+\newpage
+
 	\item \underline{Requerimiento \#2.6}: el microcontrolador debe tener una API para comunicarse con otros sistemas.
 		\begin{itemize}
 			\item \textbf{Verificación:} se  revisará la documentación de la API y se realizarán pruebas funcionales de conexión con otros sistemas, validando los endpoints y los métodos de comunicación disponibles. Se probará la respuesta del microcontrolador ante solicitudes de datos y su capacidad para enviar información correctamente.
@@ -645,7 +637,7 @@ Al finalizar el proyecto se establecen las siguientes actividades:
 	\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los
 problemas que surgieron y como se solucionaron.
 		\begin{itemize}
-			\item Se convocará a los colabores para documentar los procedimientos y técnicas utilizadas, identificando aquellas que fueron efectivas y las que no generaron los resultados esperados.
+			\item Se convocará a los colaboradores para documentar los procedimientos y técnicas utilizadas, identificando aquellas que fueron efectivas y las que no generaron los resultados esperados.
 			\item Además, se registrarán los principales problemas encontrados y las soluciones implementadas. Este análisis formará parte de las lecciones aprendidas del proyecto.
 		\end{itemize}
 		
@@ -659,7 +651,6 @@ problemas que surgieron y como se solucionaron.
 		\begin{itemize}
 			\item El responsable del proyecto redactará la memoria final, la cual será presentada en el marco de la Especialización en Sistemas Embebidos en la Facultad de Ingeniería de la Universidad de Buenos Aires.
 			\item Todos los involucrados en el proyecto serán invitados a la presentación y se les ofrecerá un agradecimiento formal por su colaboración.
-			\item Además, el responsable se ocupará de organizar esta presentación final y de coordinar la asistencia de los invitados.
 		\end{itemize}
 
 \end{enumerate}
